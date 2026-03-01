@@ -107,7 +107,7 @@ router.route('/movies')
         res.json(o)
     })
     .put((req, res) => {
-        / HTTP PUT Method
+        // HTTP PUT Method
         // Requires JWT authentication.
         // Returns a JSON object with status, message, headers, query, and env.
         var o = getJSONObjectForMovieRequirement(req);
