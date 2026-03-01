@@ -1,7 +1,6 @@
 var passport = require('passport');
 var JwtStrategy = require('passport-jwt').Strategy;
 var ExtractJwt = require('passport-jwt').ExtractJwt;
-var db = require('./db')(); 
 
 var opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme("jwt");
