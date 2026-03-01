@@ -3,6 +3,7 @@ CSC3916 HW2
 File: Server.js
 Description: Web API scaffolding for Movie API
  */
+require('dotenv').config();
 
 var express = require('express');
 var http = require('http');
@@ -106,25 +107,25 @@ router.route('/movies')
         o.message = "movie saved";
         res.json(o)
     })
-    .put((req, res) => {
+    .put(authJwtController.isAuthenticated, (req, res) => {
         // HTTP PUT Method
         // Requires JWT authentication.
         // Returns a JSON object with status, message, headers, query, and env.
         var o = getJSONObjectForMovieRequirement(req);
         o.status = 200;
         o.message = "movie updated";
-        res.json(o)
+        res.json(o);
     })
-    .delete((req, res) => {
+    .delete(authController.isAuthenticated, (req, res) => {
         // HTTP DELETE Method
         // Requires Basic authentication.
         // Returns a JSON object with status, message, headers, query, and env.
         var o = getJSONObjectForMovieRequirement(req);
         o.status = 200;
         o.message = "movie deleted";
-        res.json(o)
+        res.json(o);
     })
-    all((req, res) => {
+    .all((req, res) => {
         // Any other HTTP Method
         // Returns a message stating that the HTTP method is unsupported.
         res.status(405).send({ message: 'HTTP method not supported.' });
