@@ -86,4 +86,4 @@ url      | https://csc3916-assignment2-2uq0.onrender.com
 token    | 
 
 *token is left blank
-
+*Additional Note: While I was trying to fix and include the environment in the link, my postman updated, and says I have to pay to share my collection. So for now, I will just leave this as it is. 
