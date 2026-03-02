@@ -82,7 +82,7 @@ Collection:
 Note: I did mark include environment, but it doesn't seem to be showing in the collection no matter what I do. 
 
 Variable | Value
-url      | https://csc3916-assignment2-2uq0.onrender.com
+url      | https://csc3916-assignment2-2uq0.onrender.com  
 token    | 
 
 *token is left blank
